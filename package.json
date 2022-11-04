@@ -1,0 +1,37 @@
+{
+  "name": "strapi-provider-upload-ipfs-storage",
+  "version": "1.0.0",
+  "description": "IPFS provider for strapi upload",
+  "keywords": [
+    "upload",
+    "ipfs",
+    "web3",
+    "filebase",
+    "pinata",
+    "fleek",
+    "strapi"
+  ],
+  "homepage": "https://github.com/alexbakers/strapi-provider-upload-ipfs-storage",
+  "bugs": {
+    "url": "https://github.com/alexbakers/strapi-provider-upload-ipfs-storage/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alexbakers/strapi-provider-upload-ipfs-storage.git"
+  },
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+    "test": "node ./test/index.test.js"
+  },
+  "dependencies": {
+    "ipfs-storage": "^1.1.5"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  }
+}
