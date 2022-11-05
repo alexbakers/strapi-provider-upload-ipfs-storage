@@ -131,11 +131,11 @@ module.exports = ({ env }) => ({
 
 <img alt="Configuration Strapi + Fleek" src="https://raw.githubusercontent.com/alexbakers/strapi-provider-upload-ipfs-storage/main/public/fleek-provider.png" />
 
-| Variable | Type   | Description       | Required |
-| -------- | ------ | ----------------- | -------- |
-| key      | string | Fleek API key     | yes      |
-| secret   | string | Fleek API secret  | yes      |
-| bucket   | string | Fleek bucket name | yes      |
+| Variable | Type   | Description                            | Required |
+| -------- | ------ | -------------------------------------- | -------- |
+| key      | string | Fleek Storage API key                  | yes      |
+| secret   | string | Fleek Storage API secret               | yes      |
+| bucket   | string | Fleek bucket name (e.g. 71a...-bucket) | yes      |
 
 ```js
 module.exports = ({ env }) => ({
