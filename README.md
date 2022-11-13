@@ -69,7 +69,7 @@ FLEEK_BUCKET=""
 WEB3_TOKEN=""
 ```
 
-## Configuration Strapi + Filebase
+## Configuration Strapi + Filebase [ [tutorial](https://docs.filebase.com/configurations/third-party-configurations/backup-client-configurations/strapi-provider-plugin) ]
 
 <img alt="Configuration Strapi + Filebase" src="https://raw.githubusercontent.com/alexbakers/strapi-provider-upload-ipfs-storage/main/public/filebase-provider.png" />
 
