@@ -1,4 +1,4 @@
-# Strapi Pprovider Upload IPFS Storage
+# Strapi Provider Upload IPFS Storage
 
 <img alt="strapi-provider-upload-ipfs-storage" src="https://raw.githubusercontent.com/alexbakers/strapi-provider-upload-ipfs-storage/main/public/screenshot.png" />
 
