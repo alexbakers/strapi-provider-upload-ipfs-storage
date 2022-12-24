@@ -1,7 +1,7 @@
 {
   "name": "strapi-provider-upload-ipfs-storage",
-  "version": "1.0.4",
-  "description": "IPFS provider for strapi upload",
+  "version": "1.0.5",
+  "description": "IPFS upload provider for Strapi",
   "keywords": [
     "upload",
     "ipfs",

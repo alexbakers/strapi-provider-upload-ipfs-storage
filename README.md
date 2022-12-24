@@ -237,4 +237,6 @@ module.exports = [
 - [Fleek website](https://fleek.co/)
 - [Web3 website](https://web3.storage/)
 
+---
+
 `(c)` Alex Baker
