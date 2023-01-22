@@ -2,7 +2,7 @@
 
 <img alt="strapi-provider-upload-ipfs-storage" src="https://raw.githubusercontent.com/alexbakers/strapi-provider-upload-ipfs-storage/main/public/screenshot.png" />
 
-IPFS (Filebase, Pinata, Fleek, Web3) provider for Strapi uploads.
+IPFS (Filebase, Pinata, Fleek, Web3, Lighthouse) provider for Strapi uploads.
 
 ## Installation
 
@@ -46,6 +46,10 @@ module.exports = ({ env }) => ({
           // https://web3.storage/tokens/
           token: env("WEB3_TOKEN"),
         },
+        lighthouse: {
+          // https://files.lighthouse.storage/dashboard/apikey
+          token: env("LIGHTHOUSE_TOKEN"),
+        },
       },
     },
   },
@@ -67,6 +71,8 @@ FLEEK_SECRET=""
 FLEEK_BUCKET=""
 
 WEB3_TOKEN=""
+
+LIGHTHOUSE_TOKEN=""
 ```
 
 ## Configuration Strapi + Filebase [ [tutorial](https://docs.filebase.com/configurations/third-party-configurations/backup-client-configurations/strapi-provider-plugin) ]
@@ -185,6 +191,33 @@ module.exports = ({ env }) => ({
 });
 ```
 
+## Configuration Strapi + Lighthouse
+
+<img alt="Configuration Strapi + Lighthouse" src="https://raw.githubusercontent.com/alexbakers/strapi-provider-upload-ipfs-storage/main/public/lighthouse-provider.png" />
+
+| Variable | Type   | Description                  | Required |
+| -------- | ------ | ---------------------------- | -------- |
+| token    | string | Lighthouse Storage API Token | yes      |
+
+```js
+module.exports = ({ env }) => ({
+  // ...
+  upload: {
+    config: {
+      provider: "strapi-provider-upload-ipfs-storage",
+      providerOptions: {
+        defaultStorage: "lighthouse",
+        lighthouse: {
+          // https://files.lighthouse.storage/dashboard/apikey
+          token: env("LIGHTHOUSE_TOKEN"),
+        },
+      },
+    },
+  },
+  // ...
+});
+```
+
 ### Security Middleware Configuration
 
 Due to the default settings in the Strapi Security Middleware you will need to modify the `contentSecurityPolicy` settings to properly see thumbnail previews in the Media Library. You should replace `strapi::security` string with the object bellow instead as explained in the [middleware configuration](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/configurations/required/middlewares.html#loading-order) documentation.
@@ -236,6 +269,7 @@ module.exports = [
 - [Pinata website](https://pinata.cloud/)
 - [Fleek website](https://fleek.co/)
 - [Web3 website](https://web3.storage/)
+- [Lighthouse website](https://lighthouse.storage/)
 
 ---
 

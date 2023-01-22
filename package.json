@@ -1,6 +1,6 @@
 {
   "name": "strapi-provider-upload-ipfs-storage",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "IPFS upload provider for Strapi",
   "keywords": [
     "upload",
@@ -9,7 +9,8 @@
     "filebase",
     "pinata",
     "fleek",
-    "strapi"
+    "strapi",
+    "lighthouse"
   ],
   "homepage": "https://github.com/alexbakers/strapi-provider-upload-ipfs-storage",
   "bugs": {
@@ -28,7 +29,7 @@
     "test": "node ./test/index.test.js"
   },
   "dependencies": {
-    "ipfs-storage": "^1.1.5"
+    "ipfs-storage": "^1.2.1"
   },
   "peerDependencies": {
     "@strapi/strapi": "^4.5.1"

@@ -14,7 +14,8 @@ fs.readFile(join(__dirname, "..", "banner.png"), async (err, data) => {
     !process.env.FILEBASE_KEY &&
     !process.env.PINATA_JWT &&
     !process.env.FLEEK_KEY &&
-    !process.env.WEB3_TOKEN
+    !process.env.WEB3_TOKEN &&
+    !process.env.LIGHTHOUSE_TOKEN
   ) {
     console.log("🆘 ERROR:", "Create .env file");
     return;
@@ -124,5 +125,29 @@ fs.readFile(join(__dirname, "..", "banner.png"), async (err, data) => {
     );
   } catch (err) {
     console.log("🆘 WEB3:", err);
+  }
+
+  try {
+    const url = await ipfs.uploadFile.lighthouse(
+      {
+        token: process.env.LIGHTHOUSE_TOKEN,
+      },
+      {
+        hash: "banner",
+        ext: ".png",
+        buffer: data,
+      }
+    );
+    console.log("✅ LIGHTHOUSE:", url);
+    await ipfs.deleteFile.lighthouse(
+      {
+        token: process.env.LIGHTHOUSE_TOKEN,
+      },
+      {
+        url,
+      }
+    );
+  } catch (err) {
+    console.log("🆘 LIGHTHOUSE:", err);
   }
 });
